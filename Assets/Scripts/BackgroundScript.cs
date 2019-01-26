@@ -9,7 +9,7 @@ public class BackgroundScript : MonoBehaviour
     void Start()
     {
         rb2d= GetComponent<Rigidbody2D>();
-        rb2d.velocity= new Vector2(GameController.instance.scrollSpeed, 0);   
+        rb2d.velocity= new Vector2(0, GameController.instance.scrollSpeed);   
     }
 
     // Update is called once per frame
