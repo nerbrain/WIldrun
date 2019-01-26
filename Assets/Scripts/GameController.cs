@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //Class instance for singleton pattern user
+    public static GameController instance;
+    public GameObject gameOverText; //used to display game over text 
+    public bool gameOver= false;
+    public float scrollSpeed= -1.5f;
+    
+    //called before start and used for initialization
+    void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        } else if (instance != this){
+            // Destory (gameObject);
+        }
         
     }
 
@@ -15,4 +27,11 @@ public class GameController : MonoBehaviour
     {
         
     }
+
+//calls game over screen
+    // public void RunnerDied(){
+    //     gameOverText.setActive(true);
+    //     gamerOver= true;
+
+    // }
 }
