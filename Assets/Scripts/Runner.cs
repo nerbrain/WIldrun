@@ -12,4 +12,9 @@ public class Runner : MonoBehaviour
     {
         transform.Translate(Vector2.right * Time.deltaTime * Input.GetAxis("Horizontal") * moveSpeed);
     }
+
+    void OnCollisionEnter2D()
+    {
+        GameController.instance.RunnerDied();
+    }
 }

@@ -41,8 +41,8 @@ public class GameController : MonoBehaviour
 
 // calls game over screen
     public void RunnerDied(){
-        gameOverText.setActive(true);
-        gamerOver= true;
+        gameOverText.SetActive(true);
+        gameOver= true;
 
     }
 }
